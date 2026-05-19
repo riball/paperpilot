@@ -227,7 +227,7 @@ export default function FormatConversion() {
   const [file,            setFile]            = useState(null);
   const [drag,            setDrag]            = useState(false);
   const [selectedFormats, setSelectedFormats] = useState(["ieee"]);
-  const [outputType,      setOutputType]      = useState("pdf");
+  const [outputType,      setOutputType]      = useState("tex");
   const [loading,         setLoading]         = useState(false);
   const [result,          setResult]          = useState(null);
   const [error,           setError]           = useState("");
@@ -341,7 +341,7 @@ export default function FormatConversion() {
               <div className="fc-field">
                 <label className="fc-field-label">Output Type</label>
                 <div className="fc-chips">
-                  {["pdf", "tex"].map((t) => (
+                  {["tex"].map((t) => (
                     <button
                       key={t}
                       className={`fc-chip ${outputType === t ? "active" : ""}`}
