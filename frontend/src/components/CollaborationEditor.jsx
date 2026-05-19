@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { db } from "../firebase";
 import { ref, onValue, set, serverTimestamp } from "firebase/database";
 
-const API_BASE   = "http://localhost:8000";
+const API_BASE   = "https://paperpilot-8pwz.onrender.com";
 const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
 const C = {
@@ -471,7 +471,7 @@ export default function CollaborationEditor() {
       if (data.status === "error") throw new Error(data.message);
       setExportResult(data);
     } catch (e) {
-      setExportError(e.message || "Export failed. Make sure backend is running at localhost:8000.");
+      setExportError(e.message || "Export failed. Make sure backend is running at paperpilot-8pwz.onrender.com.");
     } finally {
       setExporting(false);
     }

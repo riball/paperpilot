@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://paperpilot-8pwz.onrender.com";
 
 const SECTIONS = [
   { key: "title",        label: "Title" },
